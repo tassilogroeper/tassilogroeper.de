@@ -1,0 +1,249 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+$font-color: #475257;
+$link-color: #339999;
+
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+html {
+  background-color: #f6f9f9;
+  color: $font-color;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 4.5em 1.5em;
+}
+
+.avatar {
+  float: left;
+  margin: 0 3em 1.5em 0;
+}
+
+.avatar img {
+  max-width: 12em;
+  max-height: 12em;
+  border-radius: 6em;
+}
+
+.content {
+  float: left;
+  width: 22.5em;
+}
+
+ul li {
+  display: inline;
+}
+
+ul a {
+  display: inline-block;
+  padding-right: 0.375em;
+}
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+p, ul, ol, dl, .title {
+  margin-bottom: 1.5em;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1;
+}
+
+ul, ol, dl {
+  list-style-type: none;
+}
+
+a {
+  color: $link-color;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: $font-color;
+  transition: color 0.2s ease;
+}
+
+/*------------------------------------*\
+    $MOBILE
+\*------------------------------------*/
+@media handheld, only screen and (max-width: 39em) {
+  .avatar,
+  .content {
+    float: none;
+  }
+
+  .avatar img {
+    max-width: 6em;
+    max-height: 6em;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
+
+/*
+Animate.css - http://daneden.me/animate
+LICENSED UNDER THE  MIT LICENSE (MIT)
+
+Copyright (c) 2012 Dan Eden
+*/
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+.animated.hinge {
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes bounceInDown {
+  0% {
+    -webkit-transform: translateY(-2000px);
+  }
+
+  60% {
+    -webkit-transform: translateY(30px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes bounceInDown {
+  0% {
+    -moz-transform: translateY(-2000px);
+  }
+
+  60% {
+    -moz-transform: translateY(30px);
+  }
+
+  80% {
+    -moz-transform: translateY(-10px);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes bounceInDown {
+  0% {
+    -o-transform: translateY(-2000px);
+  }
+
+  60% {
+    -o-transform: translateY(30px);
+  }
+
+  80% {
+    -o-transform: translateY(-10px);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  60% {
+    transform: translateY(30px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}
