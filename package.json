@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "deploy-git-ftp": "yarn build && cp bitbucket-pipelines.yml build && push-dir --dir=build --branch=git-ftp --cleanup"
+    "cp-git-ftp": "cp bitbucket-pipelines.yml build && cp .git-ftp-ignore build && cp .htaccess build",
+    "deploy-git-ftp": "yarn build && yarn cp-git-ftp && push-dir --dir=build --branch=git-ftp --cleanup"
   },
   "repository": {
     "type": "git",
