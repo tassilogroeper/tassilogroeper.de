@@ -4,7 +4,8 @@
   "description": "A light foundation for your next frontend project based on webpack.",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
-    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "deploy-git-ftp": "yarn build && cp bitbucket-pipelines.yml build && push-dir --dir=build --branch=git-ftp --cleanup"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "push-dir": "^0.4.1"
   }
 }

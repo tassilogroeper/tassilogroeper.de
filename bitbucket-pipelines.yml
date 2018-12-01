@@ -6,12 +6,19 @@
 image: node:9
 
 pipelines:
-  default:
-  - step:
-      caches:
-      - node
-      script: # Modify the commands below to build your repository.
-      - yarn
-      - yarn build
-      - apt-get install ncftp
-      - ncftpput -v -u "$FTP_USERNAME" -p "$FTP_PASSWORD" -R $FTP_HOST $FTP_SITE_ROOT build/*
+  branches:
+    master:
+    - step:
+        caches:
+        - node
+        script: # Modify the commands below to build your repository.
+        - yarn
+        - yarn build
+    git-ftp:
+    - step:
+        caches:
+        - node
+        script: # Modify the commands below to build your repository.
+        - apt-get update
+        - apt-get -qq install git-ftp
+        - git ftp push --dry-run --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://$FTP_HOST$FTP_SITE_ROOT # dry run so nothing is uploaded
