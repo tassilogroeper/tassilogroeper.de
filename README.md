@@ -1,30 +1,35 @@
-# Tassilo Gröper Website
+# template-vite-js-tailwind-v3
 
-A lightweight foundation for your next webpack based frontend project.
+- **template of:** vite + vanilaJS
+- **tailwindcss:** v3.x
 
+## Started
 
-### Installation
-
-```
-npm install
-```
-
-### Start Dev Server
-
-```
-npm start
+```bash
+yarn
+# or `npm install`
 ```
 
-### Build Prod Version
+---
 
+## Develop
+
+```bash
+yarn dev
+# or `npm run dev`
 ```
-npm run build
+
+---
+
+## Build
+
+```bash
+yarn build
+# or `npm run build`
 ```
 
-### Features:
+---
 
-* ES6 Support via [babel](https://babeljs.io/) (v7)
-* SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-* Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+<p align="center">
+<img src="./powered-by-vitawind-bright.png">
+</p>
