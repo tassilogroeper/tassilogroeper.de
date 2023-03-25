@@ -4,7 +4,7 @@
 
 [https://www.tassilogroeper.de/](https://www.tassilogroeper.de/)
 
-Deploys from [Bitbucket](https://bitbucket.org/tassilogroeper/tassilogroeper.de).
+Deploys from [GitHub](https://github.com/tassilogroeper/tassilogroeper.de).
 
 ## Started
 
