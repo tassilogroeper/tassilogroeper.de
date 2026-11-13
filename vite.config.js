@@ -5,7 +5,6 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        caseStudies: 'case-studies.html',
       },
     },
   },
